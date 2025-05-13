@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>CRISTAL FOTO y VIDEO - Presupuesto para Quinceañeras</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    .swiper-pagination { display: none !important; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff9fa;
+      overflow-x: hidden;
+    }
+    .title-font {
+      font-family: 'Dancing Script', cursive;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .tab-active {
+      border-bottom: 3px solid #d4a373;
+      color: #d4a373;
+      font-weight: 500;
+    }
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+    .floating-btn {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .service-title {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .service-title:hover {
+      color: #9d174d;
+    }
+  </style>
+</head>
+<body class="text-gray-700">
+  <header class="bg-gradient-to-r from-pink-100 to-pink-50 py-8 px-4 shadow-md">
+    <div class="container mx-auto max-w-full px-4 text-center">
+      <h1 class="title-font text-4xl md:text-5xl font-bold text-pink-800 mb-2">CRISTAL Foto y Video</h1>
+      <p class="text-lg text-pink-600">Carlos Machuca Fotografía</p>
+      <p class="mt-4 text-pink-700 italic title-font text-2xl">Volve eterna tu fiesta soñada,</p>
+      <p class="mt-2 text-pink-600">Capturando los momentos más especiales</p>
+    </div>
+  </header>
+
+  <div class="container mx-auto text-center">
+
+</div>
+
+<div class="container mx-auto px-4 py-8">
+<div class="flex border-b border-pink-200 mb-8 overflow-x-auto">
+<button class="px-4 py-2 font-medium tab-active" id="services-tab">Servicios</button>
+<button class="px-4 py-2 font-medium text-pink-600" id="portfolio-tab">Portafolio</button>
+<button class="px-4 py-2 font-medium text-pink-600" id="gallery-tab">Galería</button>
+<button class="px-4 py-2 font-medium text-pink-600" id="summary-tab">Resumen</button>
+</div>
+<div class="tab-content" id="services-content">
+<h2 class="title-font text-3xl text-pink-800 mb-2 text-center">Selecciona tus servicios</h2>
+<p class="title-font text-pink-600 text-lg mb-6 text-center">(toca el título y obtené una descripción)</p>
+<div class="mb-12">
+<h3 class="title-font text-2xl text-pink-700 mb-4 flex items-center">
+<i class="fas fa-camera-retro mr-2"></i> Durante la fiesta
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Cobertura completa de todos los momentos espontáneos, posados y grupales durante la fiesta.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Las fotos ilimitadas permiten que no se pierda ningún recuerdo, pedi todas las fotos que quieras durante la fiesta.</p>`)">Fotos Ilimitadas en la fiesta</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$300mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Se entrega después de la fiesta</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="300000" id="service1" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service1">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Filmación y edición profesional de todo el evento, incluyendo un resumen emotivo.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> El video revive las emociones, las voces y la música del gran día.</p>`)">Video de la Fiesta + Resumen</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$250mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Video profesional editado</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="250000" id="service2" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service2">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Captura la emoción previa en un entorno preparado antes de que lleguen los invitados.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Aprovechá la tranquilidad del salón vacío para lograr fotos artísticas y relajadas con tu vestido especial.</p>`)">Fotos en el salón antes de la llegada de los invitados</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Sesión prefiesta privada</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service3" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service3">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Mini entrevistas a tus seres queridos para que dejen mensajes inolvidables y graciosos.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Incluí a amigos y familiares espontáneamente, ¡salen perlitas divertidas!</p>`)">Video Entrevista divertida a invitados</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Con micrófono profesional</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service4" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service4">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Registro fotográfico de toda la ceremonia en la iglesia.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Consultá con el sacerdote si hay restricciones para moverse durante la misa.</p>`)">Fotos en Iglesia para casamiento</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$100mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Sesión completa en iglesia</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="100000" id="service5" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service5">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Captura profesional en video de la ceremonia religiosa.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Se puede incluir micrófono para que se escuchen bien los votos y las palabras del cura.</p>`)">Video en Iglesia para casamiento</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$100mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Video profesional de la ceremonia</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="100000" id="service6" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service6">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Cobertura con una cámara en el civil, ideal para recuerdos rápidos.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Aunque es breve, el civil tiene momentos clave para recordar.</p>`)">Foto y Video Resumen Registro Civil</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Una sola cámara</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service7" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service7">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Una tercera cámara permite ángulos alternativos durante todo el evento.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Ideal para grandes fiestas o salones con varios sectores.</p>`)">Tercera cámara adicional</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$100mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Mayor cobertura de la fiesta</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="100000" id="service8" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service8">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Fotos físicas 10x15 que los invitados se llevan en el momento.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Sirve como souvenir y todos se llevan un recuerdo tangible.</p>`)">Fotos instantáneas para invitados</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$100mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">100 fotos 10x15 alta calidad como souvenirs</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="100000" id="service9" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service9">Seleccionar</label>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-12">
+<h3 class="title-font text-2xl text-pink-700 mb-4 flex items-center">
+<i class="fas fa-calendar-day mr-2"></i> Antes de la fiesta
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Sesión de foto y video con 3 cambios de ropa duracion de una hora y media.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Las fotos sirven como material multiple y el video para proyectar en la fiesta.</p>`)">Book Backstage Pre 15</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$300mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Sesión de fotos + Cronologico + VideoClips + 100 Tarjetitas </p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="300000" id="service10" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service10">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Sesión con fondo blanco, negro o color en estudio profesional.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Traé diferentes outfits y accesorios para mayor variedad, duracion una hora.</p>`)">Sesión de fotos en estudio</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Fondo blanco, negro o colores, 1 hora</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service11" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service11">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Cartel personalizado impreso para ambientar el salón.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Podés usar una frase inspiradora o una foto especial.</p>`)">Banner 90x190cm</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Para decoración del salón</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id=" service12"="" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service12">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Impresión en gran formato y fotos para mostrar la sesion y tripticos para cada mesa con su numero.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> La foto sirve tambien para que la firmen, y los tripticos para ordenar las mesas.</p>`)">Foto Gigante</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$100mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Foto de 60x90cm + 20 Fotos Polaroid  + Trípticos</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="100000" id="service13" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service13">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Libro de alta calidad con hojas duras para mensajes de los invitados tarda quince dias en hacerse.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Dejalo en un lugar visible y avisá en el micrófono que firmen.</p>`)">Libro de firmas calidad imprenta</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$200mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">30x30 cuadrado 20 páginas duras</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="200000" id="service14" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service14">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Mensaje grabado con tu voz para invitar o presentar el backstage.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Hacelo con tiempo para que suene natural y emocionante.</p>`)">Grabación de voz + Video Invitación</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Dedicatoria para el video del backstage</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service15" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service15">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Clases personalizadas en salon con espejos para preparar tu show de entrada o baile sorpresa, se puede editar el tema musical.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Ensayá con la ropa o zapatos parecidos al día del evento.</p>`)">Coreografía de baile</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$100mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">5 clases personalizadas para show en fiesta</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="100000" id="service16" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service16">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Invitación digital con imágenes y datos de tu fiesta para enviar por WhatsApp.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Ideal para sorprender a tus invitados desde el primer contacto, incluir mapa, conteo y link de regalos o deposito.</p>`)">Invitación Interactiva</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Con imágenes del Backstage y datos de la fiesta</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service17" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service17">Seleccionar</label>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-12">
+<h3 class="title-font text-2xl text-pink-700 mb-4 flex items-center">
+<i class="fas fa-glass-cheers mr-2"></i> Después de la fiesta
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800">Entrega fotos y videos en link</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$0</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Alta calidad para descargar</p>
+<div class="mt-4 flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="0" disabled="" id="service18" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service18">Incluido</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Entrega física de todas tus fotos y videos editados.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Ideal para conservarlo aunque se borren archivos del celular o reproducirlos en la TV.</p>`)">Material digital en Pendrive</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Entrega física de todo el material</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service19" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service19">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Caja decorativa con 100 fotos impresas para revivir la fiesta.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Es un regalo hermoso para vos o para seres queridos.</p>`)">Caja de Recuerdos con 100 fotos</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$50mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Fotos 10x15 sueltas de recuerdo</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="50000" id="service20" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service20">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Álbum compacto en folios que incluye una gran cantidad de fotos.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Elegí las mejores para que quede equilibrado visualmente.</p>`)">Álbum mediano 100 páginas</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$100mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Tamaño 21x15 en folios </p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="100000" id="service21" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service21">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Libro premium con encuadernado cosido y hojas gruesas.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Ideal como recuerdo para toda la vida.</p>`)">Fotolibro Hojas Rígidas Cosido</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$200mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">30x20cm, 20 páginas , calidad imprenta</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="200000" id="service22" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service22">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Versión liviana con hojas rígidas y anillado.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> El anillado es mas facil de manejar.</p>`)">Fotolibro 20 páginas anillado</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$200mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Hojas Rígidas 30x20cm , hecho en imprenta</p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="200000" id="service24" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service24">Seleccionar</label>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-pink-800 service-title" onclick="showInfoBox(`<p><strong>Descripción:</strong> Álbum grande para convinar con lo que quieras , book , fiesta , cronologico.</p><p class='mt-2 text-pink-600'><strong>Consejo:</strong> Perfecto para tener todo en un buen tamaño en folios separados.</p>`)">Álbum Grande 100 páginas</h4>
+<span class="bg-pink-100 text-pink-800 px-2 py-1 rounded text-sm">$200mil</span>
+</div>
+<p class="text-sm text-gray-600 mt-2">Folios 30x20cm </p>
+<div class="mt-4 flex items-center">
+<input class="form-checkbox h-5 w-5 text-pink-600 service-checkbox" data-price="200000" id="service25" type="checkbox"/>
+<label class="ml-2 text-sm text-gray-700" for="service25">Seleccionar</label>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-8">
+<button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg" id="calculate-btn">
+                    Calcular Total
+                </button>
+</div>
+</div>
+<div class="tab-content hidden" id="portfolio-content">
+<h2 class="title-font text-3xl text-pink-800 mb-8 text-center">Nuestro Portafolio</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+<img alt="Pre Fiesta" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"/>
+<div class="portfolio-overlay absolute inset-0 bg-pink-800 bg-opacity-70 flex flex-col justify-center items-center opacity-0 transition duration-300 p-4">
+<h3 class="text-white font-bold text-xl mb-2">Pre Fiesta</h3>
+<p class="text-white text-center">Sesiones de fotos antes del gran día</p>
+<a class="mt-4 bg-white text-pink-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-100 transition duration-300" href="https://youtu.be/uCXVYASqSgg" target="_blank">
+                            Ver Video <i class="fas fa-play ml-1"></i>
+</a>
+</div>
+</div>
+<div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+<img alt="Resumen Fiesta" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"/>
+<div class="portfolio-overlay absolute inset-0 bg-pink-800 bg-opacity-70 flex flex-col justify-center items-center opacity-0 transition duration-300 p-4">
+<h3 class="text-white font-bold text-xl mb-2">Resumen Fiesta</h3>
+<p class="text-white text-center">Los mejores momentos de la celebración</p>
+<a class="mt-4 bg-white text-pink-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-100 transition duration-300" href="https://youtu.be/r0iwBxyq0dU" target="_blank">
+                            Ver Video <i class="fas fa-play ml-1"></i>
+</a>
+</div>
+</div>
+<div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+<img alt="Resumen Fotos" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"/>
+<div class="portfolio-overlay absolute inset-0 bg-pink-800 bg-opacity-70 flex flex-col justify-center items-center opacity-0 transition duration-300 p-4">
+<h3 class="text-white font-bold text-xl mb-2">Resumen Fotos</h3>
+<p class="text-white text-center">Galería de las mejores imágenes</p>
+<a class="mt-4 bg-white text-pink-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-100 transition duration-300" href="https://www.youtube.com/watch?v=ETyfXMMabk8" target="_blank">
+                            Ver Video <i class="fas fa-play ml-1"></i>
+</a>
+</div>
+</div>
+<div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+<img alt="Entrevistas" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"/>
+<div class="portfolio-overlay absolute inset-0 bg-pink-800 bg-opacity-70 flex flex-col justify-center items-center opacity-0 transition duration-300 p-4">
+<h3 class="text-white font-bold text-xl mb-2">Entrevistas</h3>
+<p class="text-white text-center">Momentos divertidos con los invitados</p>
+<a class="mt-4 bg-white text-pink-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-100 transition duration-300" href="https://youtu.be/z9qDeUQr0MM" target="_blank">
+                            Ver Video <i class="fas fa-play ml-1"></i>
+</a>
+</div>
+</div>
+<div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+<img alt="Back 15 años" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"/>
+<div class="portfolio-overlay absolute inset-0 bg-pink-800 bg-opacity-70 flex flex-col justify-center items-center opacity-0 transition duration-300 p-4">
+<h3 class="text-white font-bold text-xl mb-2">Back 15 años</h3>
+<p class="text-white text-center">Video clip de la sesion de fotos para protectar en la fiesta </p>
+<a class="mt-4 bg-white text-pink-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-100 transition duration-300" href="https://youtu.be/bNvJYLgidX8" target="_blank">
+                            Ver Video <i class="fas fa-play ml-1"></i>
+</a>
+</div>
+</div>
+<div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg">
+<img alt="Casamiento" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"/>
+<div class="portfolio-overlay absolute inset-0 bg-pink-800 bg-opacity-70 flex flex-col justify-center items-center opacity-0 transition duration-300 p-4">
+<h3 class="text-white font-bold text-xl mb-2">Casamiento</h3>
+<p class="text-white text-center">Ceremonias y celebraciones nupciales</p>
+<a class="mt-4 bg-white text-pink-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-100 transition duration-300" href="https://youtu.be/IYY2vT4Tdaw" target="_blank">
+                            Ver Video <i class="fas fa-play ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-white rounded-lg shadow-md p-6">
+<h3 class="title-font text-2xl text-pink-700 mb-4">Ejemplo de Tarjeta Virtual</h3>
+<p class="mb-4">Mira cómo luciría tu invitación interactiva personalizada:</p>
+<a class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 px-6 rounded-full transition duration-300" href="https://sites.google.com/view/boda-natalia-y-sergio/inicio" target="_blank">
+                    Ver Ejemplo <i class="fas fa-external-link-alt ml-2"></i>
+</a>
+</div>
+</div>
+<div class="tab-content hidden" id="gallery-content">
+<div class="text-center py-12">
+<h2 class="title-font text-4xl text-pink-800 mb-6">Más de 100 15 años y casamientos realizados</h2>
+<div class="swiper mySwiper max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden bg-white">
+<div class="swiper-wrapper">
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1kDMqvg838KURC0CIEpc-An9r93SoTR-z&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1SFpAM4SvfabDy_NMtrrt_yJKInuJuaJw&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1HfqBiyCyI4ovVZvC8AKPLF3GpHzua8A1&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1D_BPAiyDaOtqtObV5NNsodPsmeTuxuAn&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1pgwutuX5Ndsd0Pawk4vcvzOqJ0O5j2fM&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1RyYlPofsT1kKcaVTOrWewV_OUAKVLigH&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1yZGuyXVXhmrzDwTrGZyOSsNiK6fZ17xb&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1U9fRGt8DW9LMuov0fpqZQldDEYrcjnRZ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1XR2uOCNvgQkos__l6A6LbA7tovtk854-&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1q0XQ1F9tQ7sMsaDUiOGgdcarYkLdpNKj&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1z4G3Su-wd0SiU5RiPNwU0J50O9Mq4lGj&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1GvIHjNsahPY6rxT89BpHdoptDbACm5eX&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1BoNovYR1I-EbDIQeRLwvP9sSEYXZuYoC&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1irbxYeM6gLo1DuIBLsp9glgS5QFtH_xr&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1G-oLW6muc_3vODP507vZsNpObKW7IYMo&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=14P2ZD43-X8kn0IOrCLtzubyAaPdYg8-U&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Xi82p61ov_tG9NxIDtx6VTF0trehvkZv&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1ZfvgLPtDBZqhv-b0FFt_vLtbKOJNlKXR&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1zVCE_U8U3Ac0DzfSHvzKQ4AMBHtsVcSb&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1zyxWbtwv5CXFm6MNowhBjttBZjROABoY&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1POnvLMCaSOYvwqe-Bw1pUuuPow4dX4BV&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1SXz3K-c1Q3gEm_cqa3OOIdeIuxzql2wg&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1DjqNJd5t9KzpdnPEB1_fmVSnmpkLghjQ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1qFyghhd7nEgJx2wqLg43bTWwOIxjHGDE&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=13DTTUFm9Ag9TnTtD4dJDoW5lmXFK2h1m&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1EqT-EZPrBI31M5YjGC1-_7raw0UxJHf8&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1F6DpivkUnoTXbgROGftj3ARL7X3ob3Nt&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1kTUNer92s_Dyx-r0xwxRtVM-yjb6Oht3&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1KljgLKW8kpzEKm7aj8y3XwMmRHn0_UeJ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=15J_hTNwZXbHTBVp_KE_iEHGfkyGNwj3n&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Q1y8gIhUrmCb0uiiLoiTKrh3B7mQNisJ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1UKqNHCEY4_cEAmPrrzbPKvzEB77SKFh7&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1cMWR0RXof3t0v1S8ETriwKp29yRWs5j2&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1IY5vqI4wb2cXJObx1-zdNu8EnanJEnDM&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1P-oIJH06tho5-dvd-9EQmta2IGPAyEN3&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1hNCSr3tnyzskKDGJQ4rbi946gTFjBihD&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1BrkR2rbnHTU7afJAnUAaEQgz4J1XotOQ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=10VRbaf8HeICCOjZ_-jizQOqaVbEIj62R&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1L9Zm8IOmougdL6ufFhwZNHzU6dFD0RWD&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1n1qX8WKGUpd-E35eTJybk9HtWwrnkVJf&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=13CFGyXNLIEQoBKnEdw2vVqdx-Zsu_BAy&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1QyU8iGo3GXg4TDOBSeJv6PdB2-hV5Gjp&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1X9-sutNuJBKxIlPQL8g8LstwaJGJ7bbk&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Be6R9LBrH7tA5pJ4tD51tqtL3Coc9VKm&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1pp2fhV_hSeAq9ZmHZVsP9Ijo-Aw321P2&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1q8dMK7sgsbOJqHiaFiae6ppiBatSTljq&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1st0pNAajCH4IqDls2ywTpxbVhzJoA_0M&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1QWqGHsyuOVsoYP9kh_KGhTtzvJ3xba0Q&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1B3C3H42dKiZEPYYup3nxzvuf2-bqlsiD&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1hmxr44nPECBCfOq_k60g8UHh6J-8JWKC&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1WVQjuzSwLlkMUKggesdOC5GDFyjm-7eT&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1BOAc0GihdxZy01Z5irR8ntoLrSxJWhN0&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1pZOpmMCVYv3bvD6w7sTvlt5_bErjgvAF&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1kvEzvK8w7sl_RHe2Nq9gNiur0UkU6ZNi&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1ACqX7b6ilnlZwN2aq0SDCFqGvcclK6j5&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1iaeQ5S-43u4Y1tuElAUBP-9TbGqU4ove&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1VKv0Z1_QyfryfaPKrCNAsmkDPOHGUqvf&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1E8KSvixl1D-n8a-iFQWDaJjbA0RoyenS&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1JUYPgvtb4IkKNYICTf9tiwp_Q9XPb2ot&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1wH5hZKZOMTpXDnpzDOVTto43LLkCfPMB&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1kmNx6Yr7evrgU_I2ePpdI6DEzLzr71Oi&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=193PDnAcfPr8ZZmsbCggzMBWchzLsCjnJ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1fyc79Av2Pxobpq9BfrnjhgelAMYEQ-nt&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1w-JVngVfGdUC5c_7pqWNmRNyrGU3kHU_&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=153UO1HWF5ka5_tU0O6Ha4stBA4pDEVQc&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1A4AkVR-KZ_jowMmEjVVhQxZpTCnQ_cq8&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1N0GKFrq0bBFAzkFMk3aIlx-YYvX_nozH&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1yRcX7PQasUVfhQbZj4QxyIwHOQguqxHE&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1x2s27XiNGdmmck0bNzM23Lhta98J3lu5&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Wiiai82sYmGIL6XrnS-_F3_JkffAAS00&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=16tRq0PUV2AqY1SbkTowYJdP_9KRBJDVY&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Dvv4j6IOqnl5b1aN_hwwiZqXqa6awxO_&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1KEkNy8PjXP-HkOCQ1TDGC9aoCZ1mmII2&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1yvujtiDNjn6nauFN4LYKTWrdKsuFjFkQ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1josnD_CmTRkhoDB3tInxJU-ZzQXpE4yR&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1B38pfjY8XD4EhN4UwyHJAD3AZajZACcy&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1dC9L1odoS2OtmTB5xWBvA9xkrT17zLgv&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=17CTvS9HstuVIruOs884eODSkdWFquqWu&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1pH2lcQZA6ixCCPj2qzu0RqzdSLOzV7uW&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1c5bcemAL18c0eemYGDnCCgpAGxYdmS4m&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1nZw58VTcyPoi3wscK1Lwad70DKMQI954&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1QnniWR-Oevuw4loI-R0b4ZDw9ZUNiGxc&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=137Wb0HZO6wiNUCm48gLKUv0t7tJREeGG&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1SgS7OPYO9TjOe8Tme5fwj4jwuPXpqCzX&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1YH9juAhoh-rqFdIE-zY0BkPgJLXHcJ-5&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1-d8Mzw7ma_v2ZFG6lE2gL87Qf6LMSkHQ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=18QIaoUjacZqO4AAmmmlF1AIMRrFVSiJk&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1QO5bUjunk2x4KcIUs4_1bcT6XtgeT1kq&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1nBeaWR9gOLYgjIQ280YptWMfJW5tweRe&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1RM_Ufe2D38Wg6vTfRKuAj7UWi_W6Q5e7&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1vvzInZgJLGxGdvYBuCpzm053NXXYFqFN&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1oXsTMHtGLluGMKO4K90HawUUNO1grRvV&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1pD2EXfeewcf9T3INcjadJwy2o5boFOoT&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1u-9wb1asJk1yUbTEC4qnhXEDlyaoJgeG&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1-piKjcJHDnoyIQr8HRdrBp2jKCXJRK3h&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1poJ4TgZkytFGpQ0l8ENMUc7sJdmpCvfj&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1LFRuV7ASqav2k-8TTmtHvVVdBoSHpXDv&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1ReTPRbhNn26N2wlPHmn4dzV3-FIqF0Ow&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1s1hnJz1ciDHIu7Z0uUcw8l1dLSk-ddrV&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1i0Is-VGuiZkZiVBfjqAExJVuT27Rg_T3&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1PwveP3zW1yMpos2-GxRVW-T7dnbtyQkP&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1nNje79kjxfpGSf4Qea9UHqD5IY-T81Cw&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1PMnV4y_dAJYAuBdZh93E4jM8Fo78OmHa&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Squ7mugs2wmqIhpXA6fEzDnRGylXxUP7&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1PKQWdrGmtnc5dfjquiO2ZMHnPRJxC04a&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1VZ_TTXkMcWJOLdhvqL4WlRtCBAPCflKB&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1KXSysCquHyT1avf-gxmQb-T8bOVf7jEt&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1czoH4eZLLTP0EBVPYtYaFXDQu659K6xq&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1t9k7ip8RXVw-O6zxAxJe2WqekFW_knqo&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1p_8RxQJKc3iRohveVx7hScHLjBQMoqRl&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=18G3O4GBfem57nWffsX-ahoT09knDEPOm&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1ZND3qiAHWW8hCGtH1vgw4maU69zQkNTQ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=18pCdzaPHldos0xGyByOh7MKBtn_hjjcE&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=152aAMYFZ4_TluBIwUeVSYnUxNq_Boqpi&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=13hjt8okX9xaJ-KWcyKgerLfrlO_ZhnqX&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1qFn1yehJ1G34aaZZ_mZkk3nTKubbZcdd&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1DHrWI2XupZy-N_PvPNr2z6FVBKjLaWA5&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=13Imf8PDaxHkoS-cRSXSxgfZFOzQ9z7nM&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=121nN6pye5BWq-ttNUjVz6A_c0vZy6b3a&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1B0tuYNsEvVz8WZrVVoZkg1CP3ER3w9_L&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=10gNbcGWpzL10BjsnhrTm2OcTSqtYZ_sT&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1h2vAUvt2Vpo2VVSXEOzlvx9UHvPTRLjP&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1W5dvfmPx7f3flw9kipw4ZQdFYHhttv0o&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1_yh9i_pf9CLyiFIJJ9Y7OSOsr-YpyIkC&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1IW1-HWyYti_OTbM5QMNP_8rSElcHa9m5&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1rOuxmdhTWjM4Vrs09VbOIQT7xVGVL6H5&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=18uBLll7E_BuHhzmNa4rCYxBmqZ8wcBdr&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1T6h_bhd8rijKD5slHmIFbG_ERzE02UC7&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=117819gGNZ4TfdatOFMZYe8JmwZWgijvV&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=19g8azQ35ZmbkYtyITEiiRrqljwrQ86XX&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1aBQKcw5BO6Fwtz1cYuPZPbpXHUBorMRS&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1KrXlzIbyXln5xc28Bfc4phRD12tDqIqg&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1jpdRBuXxQPBvui5TvCIZYr7yAnwqEzbr&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1iPnELAepJRntDL6i23RF_DxnM4_szjMZ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=11mW1cT3hwkVk1RCZ1Y-fjv0uE4t-sviX&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1OyD0F8uefiERJXlN8Eej9K_82FkZkAbv&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1hHBW8Gllqu7tRS-DQUsDAwght6VPB8Py&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=10UzzHJeWWg_g4nfCtde_jnmvdYUSdIoy&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1uYQedcVzp4NzQceNMKt-iFBbWnhRRLgA&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=11y7K03SigYc2FnKAc134MkHKHlZbql6L&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1SzsTc0mkgKXhxC5Q5kQTafsw1NgR_tnz&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=19oAg4jb2Kegz_C4lhPjNDI5iJXI8yxGU&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1-cSN7rpz0dwVjfTx8cVWq5H6k0lB03Na&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1F9W6y9vRYMO9-HJ6bCroU_7TuHrl6hji&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1dAb6QtG8CCERjM5RLfVIhQ1sHMIcZhHU&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1wylXs5trnxcSIQU58yozdYG3D1hb45HI&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=11m9Xax50xDrjYYRn330Y3nvu0YvuLuUU&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Vtxiqaz7SYrrmhQZ6nP3uTiZAwyw3e-R&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=15xG51ZQ4Ftvt1SmvxThNZnYFPkNnHsDm&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1ULFC6F42aQE7qw5or8xT99P92ENsm8rE&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1vZyvQU4rQi_S0T0TxAmI4kXcC2jcp9nR&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1rTBSAJglUVxLRK90BJEntUYxfWT47oYt&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1UmCesceur93z8GRhA3iuG51JLMItb96a&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1FZkGYjSBaMtXotW-zjokyf62nslk9CRQ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1qcoDOKaGGMrM-IomIdPEuCsj2PfWQR49&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1uzCwI_6zeZrnftabHEfFeFtQPXX2gySj&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Z58ZbnjZjedy1bu602qhNUAbRhxAbthn&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1d3h5IqRsq3XrIoFZ1_A1yh0VVxsM6y8K&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Xw8j4obURaE2qxWpvrVgwtJr1puowB77&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1RTqWy6K2iGTW948pA03fpMoIXTfZAsq8&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1dGcJpa0StAJnTVVni_FOcRbPWVzFxCb5&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Ertu3muLCaOMTd248jUWwEHx5-Kmknii&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1jgeKuz-L5juj_wpIqjzwOmKFCaatE7vz&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1oIPxVLt48c4Qv5ydwQesvs0W02sUNLBJ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1HikgHyqf99gJSu7_l_5M8CXp8B6tI6ft&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1DLCmstLGUjxpyaFAK8qW8CKRc8bV2rYd&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1dTZmf-kgiVyHhXWi9OYovnZjoRTUrqYg&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Iy8ZEqrsNtT8BoBqnu0q2Jr9dJKPggXy&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1CPnFh_dhMD5tmbDrXjGNirQSOgeTteSo&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1OHrmRSt4_s-gp0ZaS6QMHHTn-cbOZ4il&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1lgJDrOnVeUnj8p8ARSDrzcgBQuQF9_Nd&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=16yzVbZ0BCeMOg-Dq7FVidTI3iFqh0PEU&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=19MRYfsgDjDo_PHf5gHTp_K42ANHPTGgs&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=154N0IFKRPbtfIQxfze2cQlb01kal5S2p&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=10iug74XCaLPIHLe_-CyhG1ntTqQg2JOQ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1K__CLJG1uvT2TpYTVL5yHzBI36h0jXxM&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1-EhsSBy0fyQJGcKr6b7i8VGLzzWOs7yE&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1HI4EaZ-RtDSINttt-O_At4qCFaIMhvL0&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=15gMpg3eCW8EesLfIIKGeou86S-EXv8M-&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1wHkBKWLo9FWk5ZTv8Q8ibk0VW6SAv9DU&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1Yn3FYmSjntSWOQO-4arp5Rx6HMUZTrq4&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=18VsfsnyZC9aN4jmWFjo45mixnNcR8cjF&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=10-UMDH4fTnIVhVqw4pheYXGqvoavKy0F&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1ZiwINuD8OJdz3YS91kRrlNZWL5EX9QiS&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1jEMpNoXpbPinGGvWRoP7ZMaEewYEJI3l&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1diEDz9qfClJ7Ll6xl9P1PHHAjW38Jhup&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=10PtrWxTzZ3Gdxc5-01gq4C5P5aXSHrXx&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1JNyoPzP6oDxpkWDPBOXaLU2hbYweLWpl&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1iOlSOyXv5HhWDTWyX5sbjnLpEs1_dmvb&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1KoGEIchIZ7zHtamu8h4cXswPWamWJlLZ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1jCc-o-PjQ5pd9LmF9_ymwkPWzUYwaOEZ&sz=w1000"/>
+        </div>
+        <div class="swiper-slide flex justify-center items-center bg-white">
+        <img alt="Galería Cristal" class="max-h-[80vh] w-auto object-contain" src="https://drive.google.com/thumbnail?id=1C5SKsN3YlLPmE6_vKMBPdbyeJiVuibRP&sz=w1000"/>
+        </div>
+
+</div>
+<div class="swiper-button-next text-pink-800"></div>
+<div class="swiper-button-prev text-pink-800"></div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+</div>
+<div class="tab-content hidden" id="summary-content">
+<h2 class="title-font text-3xl text-pink-800 mb-8 text-center">Resumen de tu Presupuesto</h2>
+<div class="bg-white rounded-lg shadow-xl p-6 mb-8">
+<div class="mb-6" id="selected-services-list">
+<p class="text-gray-500 italic">Selecciona servicios en la pestaña "Servicios" y haz clic en "Calcular Total"</p>
+</div>
+<div class="border-t border-gray-200 pt-4">
+<div class="flex justify-between items-center text-lg">
+<span class="font-bold text-pink-700">Total:</span>
+<span class="font-bold text-pink-700 text-xl" id="total">$0</span>
+</div>
+</div>
+</div>
+<div class="bg-pink-50 rounded-lg shadow-md p-6 mb-8">
+<h3 class="title-font text-xl text-pink-700 mb-4">Información importante</h3>
+<p class="mb-4">💸 <strong>Seña:</strong> Puedes señar para reservar la fecha, con la condición de que para el día del evento todo debe estar pagado.</p>
+<p>📅 Una vez que hayas seleccionado tus servicios, contáctanos para coordinar fechas, detalles o tener una reunion y realizar la contratación.</p>
+</div>
+<div class="text-center">
+<button class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg mb-4 hidden" id="whatsapp-btn">
+<i class="fab fa-whatsapp mr-2"></i> Enviar por WhatsApp
+                </button>
+<p class="text-sm text-gray-600">O contáctanos directamente al +5491167137742</p>
+</div>
+</div>
+</div>
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-pink-600 text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center floating-btn hidden" id="floating-summary-btn">
+<i class="fas fa-receipt text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-pink-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden" id="floating-badge">0</span>
+</button>
+</div>
+<footer class="bg-pink-900 text-white py-8 px-4">
+<div class="container mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<h2 class="title-font text-2xl mb-2">CRISTAL Foto y Video</h2>
+<p class="text-pink-200">Carlos Machuca Fotografía</p>
+</div>
+<div class="flex space-x-4">
+<a class="text-white hover:text-pink-300 text-2xl" href="https://www.instagram.com/carlosmachucafotografia/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<a class="text-white hover:text-pink-300 text-2xl" href="https://www.youtube.com/watch?v=JLBhh460YvU&t=11s" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+<a class="text-white hover:text-pink-300 text-2xl" href="https://www.facebook.com/carlosunq/" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+</div>
+</div>
+<div class="mt-8 text-center text-pink-300 text-sm">
+<p>© Desde el 2018 CRISTAL FOTO y VIDEO. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const servicesTab = document.getElementById('services-tab');
+            const portfolioTab = document.getElementById('portfolio-tab');
+            const galleryTab = document.getElementById('gallery-tab');
+            const summaryTab = document.getElementById('summary-tab');
+            
+            const servicesContent = document.getElementById('services-content');
+            const portfolioContent = document.getElementById('portfolio-content');
+            const galleryContent = document.getElementById('gallery-content');
+            const summaryContent = document.getElementById('summary-content');
+            
+            servicesTab.addEventListener('click', function() {
+                setActiveTab('services');
+            });
+            
+            portfolioTab.addEventListener('click', function() {
+                setActiveTab('portfolio');
+            });
+            
+            galleryTab.addEventListener('click', function() {
+                setActiveTab('gallery');
+            });
+            
+            summaryTab.addEventListener('click', function() {
+                setActiveTab('summary');
+            });
+            
+            function setActiveTab(tab) {
+                // Reset all tabs
+                servicesTab.classList.remove('tab-active');
+                portfolioTab.classList.remove('tab-active');
+                galleryTab.classList.remove('tab-active');
+                summaryTab.classList.remove('tab-active');
+                servicesContent.classList.add('hidden');
+                portfolioContent.classList.add('hidden');
+                galleryContent.classList.add('hidden');
+                summaryContent.classList.add('hidden');
+                
+                // Activate selected tab
+                if (tab === 'services') {
+                    servicesTab.classList.add('tab-active');
+                    servicesContent.classList.remove('hidden');
+                } else if (tab === 'portfolio') {
+                    portfolioTab.classList.add('tab-active');
+                    portfolioContent.classList.remove('hidden');
+                } else if (tab === 'gallery') {
+                    galleryTab.classList.add('tab-active');
+                    galleryContent.classList.remove('hidden');
+                } else if (tab === 'summary') {
+                    summaryTab.classList.add('tab-active');
+                    summaryContent.classList.remove('hidden');
+                    updateSummary();
+                }
+            }
+            
+            // Calculate total functionality
+            const calculateBtn = document.getElementById('calculate-btn');
+            const whatsappBtn = document.getElementById('whatsapp-btn');
+            const floatingBtn = document.getElementById('floating-summary-btn');
+            const floatingBadge = document.getElementById('floating-badge');
+            
+            calculateBtn.addEventListener('click', function() {
+                updateSummary();
+                setActiveTab('summary');
+                window.scrollTo(0, 0);
+            });
+            
+            floatingBtn.addEventListener('click', function() {
+                setActiveTab('summary');
+                window.scrollTo(0, 0);
+            });
+            
+            // Track selected services
+            let selectedServices = [];
+            const checkboxes = document.querySelectorAll('.service-checkbox');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const serviceId = this.id;
+                    const serviceName = this.closest('.service-card').querySelector('h4').textContent;
+                    const servicePrice = parseInt(this.dataset.price);
+                    
+                    if (this.checked) {
+                        selectedServices.push({
+                            id: serviceId,
+                            name: serviceName,
+                            price: servicePrice
+                        });
+                    } else {
+                        selectedServices = selectedServices.filter(service => service.id !== serviceId);
+                    }
+                    
+                    // Update floating badge
+                    if (selectedServices.length > 0) {
+                        floatingBtn.classList.remove('hidden');
+                        floatingBadge.classList.remove('hidden');
+                        floatingBadge.textContent = selectedServices.length;
+                    } else {
+                        floatingBtn.classList.add('hidden');
+                        floatingBadge.classList.add('hidden');
+                    }
+                });
+            });
+            
+            function updateSummary() {
+                const selectedList = document.getElementById('selected-services-list');
+                const totalEl = document.getElementById('total');
+                
+                if (selectedServices.length === 0) {
+                    selectedList.innerHTML = '<p class="text-gray-500 italic">Selecciona servicios en la pestaña "Servicios" y haz clic en "Calcular Total"</p>';
+                    totalEl.textContent = '$0';
+                    whatsappBtn.classList.add('hidden');
+                    return;
+                }
+                
+                let html = '<h3 class="font-bold text-lg text-pink-700 mb-4">Servicios seleccionados:</h3><ul class="divide-y divide-gray-200">';
+                
+                let total = 0;
+                
+                selectedServices.forEach(service => {
+                    html += `
+                        <li class="py-3 flex justify-between">
+                            <span>${service.name}</span>
+                            <span class="font-medium">$${service.price.toLocaleString()}</span>
+                        </li>
+                    `;
+                    total += service.price;
+                });
+                
+                html += '</ul>';
+                selectedList.innerHTML = html;
+                
+                totalEl.textContent = `$${total.toLocaleString()}`;
+                
+                // Update WhatsApp button
+                whatsappBtn.classList.remove('hidden');
+                whatsappBtn.onclick = function() {
+                    let message = "Hola Carlos\n\nTe envío la lista de los servicios que me gustaría contratar:\n\n";
+                    
+                    selectedServices.forEach(service => {
+                        message += `- ${service.name}: $${service.price.toLocaleString()}\n`;
+                    });
+                    
+                    message += `\nTotal: $${total.toLocaleString()}\n\n¿Podemos coordinar los detalles?`;
+                    
+                    const encodedMessage = encodeURIComponent(message);
+                    window.open(`https://wa.me/5491167137742?text=${encodedMessage}`, '_blank');
+                };
+            }
+        });
+    </script>
+<script>
+        function showInfoBox(content) {
+            const modalBg = document.createElement('div');
+            modalBg.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modalBg.id = 'popup-modal';
+            
+            const modalBox = document.createElement('div');
+            modalBox.className = 'bg-white max-w-md mx-auto p-6 rounded-lg shadow-lg text-left';
+            modalBox.innerHTML = content + '<div class="text-right mt-4"><button onclick="document.getElementById(\'popup-modal\').remove()" class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">Cerrar</button></div>';
+            
+            modalBg.appendChild(modalBox);
+            document.body.appendChild(modalBg);
+        }
+    </script>
+</body>
+</html>
