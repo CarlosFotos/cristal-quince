@@ -194,7 +194,7 @@
       <div class="click-hint">📸 Toca en las imágenes para obtener una descripción</div>
       <div class="grid gap-4 md:grid-cols-2" id="grid-despues"></div>
 
-      <!-- Botón VER TOTAL movido arriba de combos -->
+      <!-- Botón VER TOTAL -->
       <div class="text-center my-8">
         <button class="btn-relief text-white font-extrabold py-4 px-10 rounded-2xl text-lg shadow-2xl transition transform active:scale-95" id="calcular-total-btn">
           📋 VER TOTAL DEL PRESUPUESTO
@@ -259,8 +259,9 @@
     durante: [
       { n: "Fotos Ilimitadas en la fiesta", p: 300000, e: "Cobertura total", d: "Cobertura completa de todos los momentos.", c: "No se pierde ningún recuerdo." },
       { n: "Video de la Fiesta + Resumen", p: 250000, e: "Filmación + Edición", d: "Filmación profesional con edición emotiva.", c: "Revive voces y música." },
-      { n: "Proyección del evento en vivo en el salón", p: 200000, e: "Pantallas gigantes", d: "Proyección en tiempo real en pantallas del salón.", c: "Ideal para entrada, vals o shows." },
-      { n: "Video de Cierre", p: 200000, e: "Resumen del evento", d: "Proyección en la pantalla del salón al casi finalizar el evento que muestra los mejores momentos para un cierre de lujo impactante.", c: "Sorprende a tus invitados con un final emotivo." },
+      { n: "Proyección del evento en vivo en el salón", p: 100000, e: "Pantallas gigantes", d: "Proyección en tiempo real en pantallas del salón.", c: "Ideal para entrada, vals o shows." },
+      { n: "Video de Cierre", p: 100000, e: "Resumen del evento", d: "Proyección en la pantalla del salón al casi finalizar el evento que muestra los mejores momentos para un cierre de lujo impactante.", c: "Sorprende a tus invitados con un final emotivo." },
+      { n: "Entrega inmediata", p: 50000, e: "Express 24hs", d: "Entrega del Material de foto y video digital el mismo dia del evento dentro de las 24hs.", c: "Ideal si necesitas las fotos con urgencia para redes sociales o regalos." },
       { n: "Fotos en el salón antes de la llegada de invitados", p: 50000, e: "Sesión privada", d: "Captura la emoción previa.", c: "Aprovechá la tranquilidad." },
       { n: "Video Entrevista divertida a invitados", p: 50000, e: "Testimonios", d: "Mensajes inolvidables de tus seres queridos.", c: "Salen perlitas divertidas." },
       { n: "Fotos en Iglesia (casamiento)", p: 100000, e: "Ceremonia", d: "Registro fotográfico de la iglesia.", c: "Consultá restricciones." },
@@ -273,14 +274,14 @@
       { n: "Book Backstage Pre 15", p: 300000, e: "Sesión + VideoClips", d: "1.5hs con 3 cambios de ropa.", c: "Fotos para banners y video para proyectar." },
       { n: "Sesión de fotos en estudio", p: 50000, e: "Fondo profesional", d: "Fondo blanco/negro.", c: "Traé varios outfits." },
       { n: "Banner 90x190cm", p: 50000, e: "Impresión lona", d: "Cartel personalizado.", c: "Usá una foto especial." },
-      { n: "Foto Gigante + Trípticos", p: 100000, e: "Pack decoración", d: "60x90cm + Polaroid + números de mesa.", c: "Sirve para firmas." },
+      { n: "Foto Gigante + Trípticos + Fotitos del Book Autoadhesivas", p: 150000, e: "Pack decoración", d: "Impresión gran formato 60x90cm + 20 Polaroid + Trípticos para mesas + Fotitos autoadhesivas del book.", c: "La foto sirve también para que la firmen, y los trípticos ordenan las mesas." },
       { n: "Libro de firmas calidad imprenta", p: 200000, e: "Libro lujo", d: "30x30 cuadrado 20 páginas duras.", c: "Dejalo visible." },
       { n: "Grabación de voz + Video Invitación", p: 50000, e: "Personal", d: "Mensaje grabado.", c: "Hacelo con tiempo." },
       { n: "Coreografía de baile (5 clases)", p: 100000, e: "Clases", d: "5 clases personalizadas.", c: "Ensayá con los zapatos del evento." },
       { n: "Invitación Interactiva", p: 50000, e: "Digital", d: "WhatsApp con mapa y regalos.", c: "Sorprendé desde el inicio.", link: "https://sites.google.com/view/boda-natalia-y-sergio/inicio" }
     ],
     despues: [
-      { n: "Entrega fotos y videos en link (drive)", p: 0, e: "Incluido", d: "Alta calidad para descargar.", c: "Gratuito.", inc: true },
+      { n: "Entrega fotos y video via link + Pagina del evento personalizada", p: 0, e: "Incluido", d: "Alta calidad para descargar + página web personalizada con tus fotos.", c: "Compartí con todos tus invitados.", inc: true },
       { n: "Material digital en Pendrive", p: 50000, e: "Físico", d: "Entrega física total.", c: "Respaldo duradero." },
       { n: "Caja de Recuerdos con 100 fotos", p: 50000, e: "Impresas", d: "Caja decorativa con 100 fotos.", c: "Regalo hermoso." },
       { n: "Álbum mediano 100 páginas", p: 100000, e: "Folios 21x15", d: "Álbum compacto.", c: "Elegí las mejores." },
@@ -290,11 +291,11 @@
     ]
   };
 
-  // Definición de combos (sin aclaraciones de cámaras)
+  // Definición de combos (con precios actualizados y nuevo servicio en Oro)
   const combos = [
     { nombre: "Combo Bronce", ahorro: 50000, total: 250000, servicios: ["100 Fotos Profesionales + 1 Video Resumen de 5 minutos"] },
-    { nombre: "Combo Plata", ahorro: 100000, total: 900000, servicios: ["Fotos Ilimitadas en la fiesta", "Video de la Fiesta + Resumen", "Fotos en el salón antes de la llegada de invitados", "Fotos instantáneas para invitados (100u)", "Video de Cierre", "Álbum mediano 100 páginas"] },
-    { nombre: "Combo Oro", ahorro: 200000, total: 1550000, servicios: ["Fotos Ilimitadas en la fiesta", "Video de la Fiesta + Resumen", "Video Entrevista divertida a invitados", "Fotos en el salón antes de la llegada de invitados", "Video de Cierre", "Fotos instantáneas para invitados (100u)", "Book Backstage Pre 15", "Banner 90x190cm", "Foto Gigante + Trípticos", "Libro de firmas calidad imprenta", "Invitación Interactiva", "Material digital en Pendrive", "Álbum Grande 100 páginas"] }
+    { nombre: "Combo Plata", ahorro: 100000, total: 800000, servicios: ["Fotos Ilimitadas en la fiesta", "Video de la Fiesta + Resumen", "Fotos en el salón antes de la llegada de invitados", "Fotos instantáneas para invitados (100u)", "Video de Cierre", "Álbum mediano 100 páginas"] },
+    { nombre: "Combo Oro", ahorro: 200000, total: 1500000, servicios: ["Fotos Ilimitadas en la fiesta", "Video de la Fiesta + Resumen", "Video Entrevista divertida a invitados", "Fotos en el salón antes de la llegada de invitados", "Video de Cierre", "Fotos instantáneas para invitados (100u)", "Book Backstage Pre 15", "Banner 90x190cm", "Foto Gigante + Trípticos + Fotitos del Book Autoadhesivas", "Libro de firmas calidad imprenta", "Invitación Interactiva", "Material digital en Pendrive", "Álbum Grande 100 páginas", "Entrega inmediata"] }
   ];
 
   // Servicios especiales para combos (no se muestran individualmente)
@@ -351,7 +352,7 @@
     document.body.appendChild(modal);
   }
 
-  // ======================== COMBOS (con botón verde que envía WhatsApp directo) ========================
+  // ======================== COMBOS (botón verde WhatsApp directo) ========================
   function renderCombos() {
     const container = document.getElementById('combos-container');
     combos.forEach(combo => {
@@ -370,7 +371,6 @@
       `;
       container.appendChild(div);
     });
-    // Eventos para botones de combo (envío directo a WhatsApp)
     document.querySelectorAll('.btn-whatsapp-combo').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
