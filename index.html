@@ -4,39 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
   <title>CRISTAL FOTO y VIDEO | Presupuesto Quinceañeras</title>
-  <!-- Tailwind + Fuentes -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(145deg, #fff5f7 0%, #ffe6ef 100%);
       background-attachment: fixed;
       overflow-x: hidden;
     }
-    /* Canvas de partículas */
     #particles-canvas {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       z-index: 0;
       pointer-events: auto;
       cursor: crosshair;
     }
-    .content-wrapper {
-      position: relative;
-      z-index: 10;
-    }
-    /* Logo estilo Cristal */
+    .content-wrapper { position: relative; z-index: 10; }
     .logo-cristal {
       font-weight: 900;
       font-size: clamp(3rem, 12vw, 5rem);
@@ -46,7 +33,6 @@
       background-clip: text;
       color: transparent;
       line-height: 1;
-      text-shadow: 0 2px 8px rgba(190,24,93,0.2);
     }
     .logo-fotoyvideo {
       font-weight: 400;
@@ -57,21 +43,23 @@
       border-bottom: 1px solid rgba(190,24,93,0.4);
       padding: 0.2rem 1rem;
       display: inline-block;
-      text-transform: uppercase;
     }
-    /* Títulos de sección */
     .section-header {
       font-family: 'Dancing Script', cursive;
       font-size: clamp(2rem, 8vw, 3.2rem);
       color: #831843;
       text-align: center;
-      margin: 2rem 0 1rem 0;
+      margin: 2rem 0 0.5rem;
       padding-bottom: 0.5rem;
       border-bottom: 3px dashed rgba(190,24,93,0.3);
-      font-weight: 700;
-      letter-spacing: 1px;
     }
-    /* Tarjetas de servicio con relieve y hover flotante */
+    .click-hint {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #be185d;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
     .service-card {
       background: rgba(255,255,255,0.92);
       backdrop-filter: blur(6px);
@@ -82,73 +70,45 @@
       align-items: center;
       box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.8);
       transition: all 0.25s ease;
-      border: 1px solid rgba(255,255,255,0.9);
     }
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px -10px rgba(190,24,93,0.25), 0 0 0 1px #fbcfe8;
-    }
-    /* Miniaturas menú */
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -10px rgba(190,24,93,0.25); }
     .menu-thumb {
-      width: 75px;
-      height: 75px;
+      width: 75px; height: 75px;
       object-fit: cover;
       border-radius: 1rem;
       border: 2px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       cursor: pointer;
       flex-shrink: 0;
-      transition: transform 0.2s;
     }
-    .menu-thumb:active { transform: scale(0.96); }
-    /* Botón relieve "saliente" */
     .btn-relief {
       background: #db2777;
       box-shadow: 0 12px 20px -8px rgba(219,39,119,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
       transition: all 0.2s ease;
-      border: none;
     }
-    .btn-relief:active {
-      transform: translateY(3px);
-      box-shadow: 0 6px 12px -4px rgba(219,39,119,0.5);
-    }
-    /* Tabs */
+    .btn-relief:active { transform: translateY(3px); box-shadow: 0 6px 12px -4px rgba(219,39,119,0.5); }
     .tab-btn {
       padding: 0.6rem 1.2rem;
       font-weight: 700;
       border-radius: 999px;
-      transition: all 0.2s;
       background: rgba(255,255,240,0.7);
       backdrop-filter: blur(4px);
       color: #831843;
     }
-    .tab-active {
-      background: #db2777;
-      color: white;
-      box-shadow: 0 8px 18px -6px #db2777;
-    }
-    /* Galería miniaturas */
+    .tab-active { background: #db2777; color: white; box-shadow: 0 8px 18px -6px #db2777; }
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
       gap: 0.7rem;
     }
     .gallery-thumb {
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1;
       border-radius: 0.8rem;
       overflow: hidden;
       cursor: pointer;
       border: 2px solid white;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.15s;
     }
-    .gallery-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .gallery-thumb:active { transform: scale(0.96); }
-    /* Lightbox */
+    .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
     #lightbox {
       display: none;
       position: fixed;
@@ -159,25 +119,13 @@
       justify-content: center;
       padding: 1.5rem;
     }
-    #lightbox img {
-      max-width: 100%;
-      max-height: 85vh;
-      border-radius: 1.5rem;
-      box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    }
-    /* Video cards pequeñas */
+    #lightbox img { max-width: 100%; max-height: 85vh; border-radius: 1.5rem; }
     .video-mini {
       background: white;
       border-radius: 1rem;
       overflow: hidden;
       box-shadow: 0 8px 15px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
     }
-    .video-mini:hover { transform: translateY(-3px); }
-    /* scroll reveal */
-    .reveal { opacity: 0; transform: translateY(20px); transition: 0.6s ease; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-    /* texto precio */
     .price-badge {
       font-weight: 800;
       background: #fff0f3;
@@ -185,9 +133,28 @@
       border-radius: 40px;
       font-size: 0.75rem;
       color: #be185d;
-      border: 1px solid #fbcfe8;
     }
     .service-checkbox { width: 1.3rem; height: 1.3rem; accent-color: #db2777; }
+    .combo-card {
+      background: linear-gradient(135deg, #fff 0%, #fef2f2 100%);
+      border-radius: 1.8rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 2px solid #fbcfe8;
+    }
+    .combo-card:active { transform: scale(0.98); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: 0.6s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .btn-whatsapp-combo {
+      background: #25D366;
+      transition: all 0.2s;
+    }
+    .btn-whatsapp-combo:active { transform: scale(0.96); }
+    .ahorro-text {
+      font-size: 1rem;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -196,7 +163,7 @@
 
 <div class="content-wrapper">
   <header class="pt-10 pb-6 px-4 text-center">
-    <div class="logo-container flex flex-col items-center">
+    <div class="flex flex-col items-center">
       <div class="logo-cristal">CRISTAL</div>
       <div class="logo-fotoyvideo mt-2">FOTO Y VIDEO</div>
     </div>
@@ -205,63 +172,67 @@
   </header>
 
   <div class="container mx-auto max-w-5xl px-4">
-    <!-- Tabs móvil -->
     <div class="flex justify-center sticky top-3 z-50 mb-8">
-      <div class="bg-white/60 backdrop-blur-xl p-1.5 rounded-full shadow-md flex gap-1 border border-white/60">
+      <div class="bg-white/60 backdrop-blur-xl p-1.5 rounded-full shadow-md flex gap-1">
         <button class="tab-btn tab-active" id="tab-serv">Servicios</button>
         <button class="tab-btn" id="tab-gal">Galería</button>
         <button class="tab-btn" id="tab-res">Resumen</button>
       </div>
     </div>
 
-    <!-- SECCIÓN SERVICIOS -->
+    <!-- SERVICIOS -->
     <div id="content-serv" class="tab-pane reveal active">
       <h2 class="section-header">✨ Durante la fiesta</h2>
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-2" id="grid-durante"></div>
+      <div class="click-hint">📸 Toca en las imágenes para obtener una descripción</div>
+      <div class="grid gap-4 md:grid-cols-2" id="grid-durante"></div>
 
       <h2 class="section-header">🌸 Antes de la fiesta</h2>
+      <div class="click-hint">📸 Toca en las imágenes para obtener una descripción</div>
       <div class="grid gap-4 md:grid-cols-2" id="grid-antes"></div>
 
       <h2 class="section-header">🎁 Después de la fiesta</h2>
+      <div class="click-hint">📸 Toca en las imágenes para obtener una descripción</div>
       <div class="grid gap-4 md:grid-cols-2" id="grid-despues"></div>
 
-      <div class="text-center my-12">
+      <!-- Botón VER TOTAL movido arriba de combos -->
+      <div class="text-center my-8">
         <button class="btn-relief text-white font-extrabold py-4 px-10 rounded-2xl text-lg shadow-2xl transition transform active:scale-95" id="calcular-total-btn">
           📋 VER TOTAL DEL PRESUPUESTO
         </button>
       </div>
+
+      <!-- COMBOS CON DESCUENTOS -->
+      <h2 class="section-header">🔥 COMBOS CON DESCUENTOS</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" id="combos-container"></div>
     </div>
 
-    <!-- SECCIÓN GALERÍA: AHORA FOTOS ARRIBA, VIDEOS ABAJO -->
+    <!-- GALERÍA -->
     <div id="content-gal" class="tab-pane hidden reveal">
-      <!-- 1. GALERÍA DE FOTOS (ARRIBA) -->
       <h2 class="section-header">📸 Galería de Fotos</h2>
       <div class="gallery-grid" id="galeria-fotos"></div>
       <p class="text-center text-gray-500 text-sm mt-6" id="galeria-count"></p>
 
-      <!-- 2. NUESTROS VIDEOS (ABAJO) -->
       <h2 class="section-header mt-12">🎬 Nuestros Videos</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8" id="videos-list"></div>
 
-      <!-- 3. EJEMPLO TARJETA VIRTUAL (AL FINAL) -->
-      <div class="bg-white/70 backdrop-blur-md rounded-2xl p-5 mb-10 shadow-md border border-white">
+      <div class="bg-white/70 backdrop-blur-md rounded-2xl p-5 mb-10 shadow-md">
         <h3 class="font-bold text-xl text-pink-800 flex gap-2 items-center"><i class="fas fa-envelope-open-text"></i> Ejemplo de Tarjeta Virtual</h3>
         <p class="text-gray-700 my-2">Mirá cómo luciría tu invitación interactiva personalizada:</p>
-        <a href="https://sites.google.com/view/boda-natalia-y-sergio/inicio" target="_blank" class="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-5 rounded-full transition shadow-md">Ver Ejemplo <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://sites.google.com/view/boda-natalia-y-sergio/inicio" target="_blank" class="inline-flex items-center gap-2 bg-pink-600 text-white font-bold py-2 px-5 rounded-full transition shadow-md">Ver Ejemplo <i class="fas fa-external-link-alt"></i></a>
       </div>
     </div>
 
-    <!-- SECCIÓN RESUMEN -->
+    <!-- RESUMEN -->
     <div id="content-res" class="tab-pane hidden reveal">
       <h2 class="section-header">💰 Resumen de tu Presupuesto</h2>
-      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 shadow-xl border border-white mb-6">
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 shadow-xl mb-6">
         <div id="resumen-lista" class="space-y-3 min-h-[120px]"></div>
         <div class="border-t-2 border-pink-100 pt-5 mt-3 flex justify-between items-center">
           <span class="text-2xl font-black text-pink-800">TOTAL</span>
           <span class="text-3xl font-extrabold text-pink-600" id="total-precio">$0</span>
         </div>
       </div>
-      <button id="whatsapp-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-2xl shadow-xl flex items-center justify-center gap-3 text-lg transition transform active:scale-95 mb-16">
+      <button id="whatsapp-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-2xl shadow-xl flex items-center justify-center gap-3 text-lg transition mb-16">
         <i class="fab fa-whatsapp text-2xl"></i> Enviar por WhatsApp
       </button>
       <p class="text-center text-gray-600 text-sm pb-10">📞 Contacto directo: +54 9 11 6713-7742</p>
@@ -278,85 +249,84 @@
   </footer>
 </div>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" onclick="this.style.display='none'">
   <img id="lightbox-img" src="" alt="ampliar">
 </div>
 
 <script>
-  // ----- BASE DE DATOS COMPLETA (incluye nuevo servicio "Proyección en vivo") -----
+  // ======================== DATOS COMPLETOS ========================
   const serviciosData = {
     durante: [
-      { n: "Fotos Ilimitadas en la fiesta", p: 300000, e: "Cobertura total", d: "Cobertura completa de todos los momentos espontáneos, posados y grupales.", c: "Las fotos ilimitadas permiten que no se pierda ningún recuerdo, pedí todas las fotos que quieras." },
-      { n: "Video de la Fiesta + Resumen", p: 250000, e: "Filmación + Edición", d: "Filmación profesional con edición emotiva, incluye resumen destacado.", c: "El video revive las emociones, las voces y la música del gran día." },
-      { n: "Proyección del evento en vivo en el salón", p: 200000, e: "Pantallas gigantes", d: "Proyección con seguimiento en momentos importantes para que se vea en las pantallas gigantes del salón lo que capte el filmaker.", c: "Sirve para momentos importantes como la entrada, vals o shows, discursos." },
-      { n: "Fotos en el salón antes de la llegada de invitados", p: 50000, e: "Sesión privada", d: "Captura la emoción previa en un entorno preparado antes de que lleguen los invitados.", c: "Aprovechá la tranquilidad del salón vacío para lograr fotos artísticas." },
-      { n: "Video Entrevista divertida a invitados", p: 50000, e: "Testimonios", d: "Mini entrevistas a tus seres queridos para que dejen mensajes inolvidables.", c: "Incluí a amigos y familiares espontáneamente, ¡salen perlitas divertidas!" },
-      { n: "Fotos en Iglesia (casamiento)", p: 100000, e: "Ceremonia", d: "Registro fotográfico de toda la ceremonia en la iglesia.", c: "Consultá con el sacerdote si hay restricciones para moverse." },
-      { n: "Video en Iglesia (casamiento)", p: 100000, e: "Ceremonia", d: "Captura profesional en video de la ceremonia religiosa.", c: "Se puede incluir micrófono para que se escuchen bien los votos." },
-      { n: "Foto y Video Resumen Registro Civil", p: 50000, e: "Cobertura express", d: "Cobertura con una cámara en el civil, ideal para recuerdos rápidos.", c: "Aunque es breve, el civil tiene momentos clave para recordar." },
-      { n: "Tercera cámara adicional", p: 100000, e: "Más ángulos", d: "Una tercera cámara permite ángulos alternativos durante todo el evento.", c: "Ideal para grandes fiestas o salones con varios sectores." },
-      { n: "Fotos instantáneas para invitados (100u)", p: 100000, e: "Souvenir físico", d: "Fotos físicas 10x15 que los invitados se llevan en el momento.", c: "Sirve como souvenir y todos se llevan un recuerdo tangible." }
+      { n: "Fotos Ilimitadas en la fiesta", p: 300000, e: "Cobertura total", d: "Cobertura completa de todos los momentos.", c: "No se pierde ningún recuerdo." },
+      { n: "Video de la Fiesta + Resumen", p: 250000, e: "Filmación + Edición", d: "Filmación profesional con edición emotiva.", c: "Revive voces y música." },
+      { n: "Proyección del evento en vivo en el salón", p: 200000, e: "Pantallas gigantes", d: "Proyección en tiempo real en pantallas del salón.", c: "Ideal para entrada, vals o shows." },
+      { n: "Video de Cierre", p: 200000, e: "Resumen del evento", d: "Proyección en la pantalla del salón al casi finalizar el evento que muestra los mejores momentos para un cierre de lujo impactante.", c: "Sorprende a tus invitados con un final emotivo." },
+      { n: "Fotos en el salón antes de la llegada de invitados", p: 50000, e: "Sesión privada", d: "Captura la emoción previa.", c: "Aprovechá la tranquilidad." },
+      { n: "Video Entrevista divertida a invitados", p: 50000, e: "Testimonios", d: "Mensajes inolvidables de tus seres queridos.", c: "Salen perlitas divertidas." },
+      { n: "Fotos en Iglesia (casamiento)", p: 100000, e: "Ceremonia", d: "Registro fotográfico de la iglesia.", c: "Consultá restricciones." },
+      { n: "Video en Iglesia (casamiento)", p: 100000, e: "Ceremonia", d: "Filmación profesional de la ceremonia.", c: "Incluye micrófonos." },
+      { n: "Foto y Video Resumen Registro Civil", p: 50000, e: "Cobertura express", d: "Cobertura rápida.", c: "Momentos clave." },
+      { n: "Tercera cámara adicional", p: 100000, e: "Más ángulos", d: "Ángulos alternativos durante todo el evento.", c: "Ideal para salones grandes." },
+      { n: "Fotos instantáneas para invitados (100u)", p: 100000, e: "Souvenir físico", d: "Fotos 10x15 en el momento.", c: "Recuerdo tangible." }
     ],
     antes: [
-      { n: "Book Backstage Pre 15", p: 300000, e: "Sesión + VideoClips", d: "Sesión de foto y video con 3 cambios de ropa duración 1.5hs.", c: "Las fotos sirven como material múltiple y el video para proyectar en la fiesta." },
-      { n: "Sesión de fotos en estudio", p: 50000, e: "Fondo profesional", d: "Sesión con fondo blanco, negro o color en estudio profesional.", c: "Traé diferentes outfits y accesorios para mayor variedad, duración 1 hora." },
-      { n: "Banner 90x190cm", p: 50000, e: "Impresión lona", d: "Cartel personalizado impreso para ambientar el salón.", c: "Podés usar una frase inspiradora o una foto especial." },
-      { n: "Foto Gigante + Trípticos", p: 100000, e: "Pack decoración", d: "Impresión gran formato 60x90cm + 20 Fotos Polaroid + Trípticos para mesas.", c: "La foto sirve también para que la firmen, y los trípticos ordenan las mesas." },
-      { n: "Libro de firmas calidad imprenta", p: 200000, e: "Libro lujo", d: "Libro de alta calidad 30x30 cuadrado 20 páginas duras.", c: "Dejalo en un lugar visible y avisá en el micrófono que firmen." },
-      { n: "Grabación de voz + Video Invitación", p: 50000, e: "Personal", d: "Mensaje grabado con tu voz para invitar o presentar el backstage.", c: "Hacelo con tiempo para que suene natural y emocionante." },
-      { n: "Coreografía de baile (5 clases)", p: 100000, e: "Clases personalizadas", d: "Clases en salón con espejos para preparar show de entrada o baile sorpresa.", c: "Ensayá con la ropa o zapatos parecidos al día del evento." },
-      { n: "Invitación Interactiva", p: 50000, e: "Digital", d: "Invitación digital con imágenes, mapa, conteo y link de regalos.", c: "Ideal para sorprender a tus invitados desde el primer contacto.", link: "https://sites.google.com/view/boda-natalia-y-sergio/inicio" }
+      { n: "Book Backstage Pre 15", p: 300000, e: "Sesión + VideoClips", d: "1.5hs con 3 cambios de ropa.", c: "Fotos para banners y video para proyectar." },
+      { n: "Sesión de fotos en estudio", p: 50000, e: "Fondo profesional", d: "Fondo blanco/negro.", c: "Traé varios outfits." },
+      { n: "Banner 90x190cm", p: 50000, e: "Impresión lona", d: "Cartel personalizado.", c: "Usá una foto especial." },
+      { n: "Foto Gigante + Trípticos", p: 100000, e: "Pack decoración", d: "60x90cm + Polaroid + números de mesa.", c: "Sirve para firmas." },
+      { n: "Libro de firmas calidad imprenta", p: 200000, e: "Libro lujo", d: "30x30 cuadrado 20 páginas duras.", c: "Dejalo visible." },
+      { n: "Grabación de voz + Video Invitación", p: 50000, e: "Personal", d: "Mensaje grabado.", c: "Hacelo con tiempo." },
+      { n: "Coreografía de baile (5 clases)", p: 100000, e: "Clases", d: "5 clases personalizadas.", c: "Ensayá con los zapatos del evento." },
+      { n: "Invitación Interactiva", p: 50000, e: "Digital", d: "WhatsApp con mapa y regalos.", c: "Sorprendé desde el inicio.", link: "https://sites.google.com/view/boda-natalia-y-sergio/inicio" }
     ],
     despues: [
-      { n: "Entrega fotos y videos en link (drive)", p: 0, e: "Incluido", d: "Alta calidad para descargar.", c: "Enlace directo y gratuito.", inc: true },
-      { n: "Material digital en Pendrive", p: 50000, e: "Físico", d: "Entrega física de todas tus fotos y videos editados.", c: "Ideal para conservarlo aunque se borren archivos del celular." },
-      { n: "Caja de Recuerdos con 100 fotos", p: 50000, e: "Fotos impresas", d: "Caja decorativa con 100 fotos impresas 10x15.", c: "Es un regalo hermoso para vos o para seres queridos." },
-      { n: "Álbum mediano 100 páginas", p: 100000, e: "Folios 21x15", d: "Álbum compacto en folios que incluye gran cantidad de fotos.", c: "Elegí las mejores para que quede equilibrado visualmente." },
-      { n: "Fotolibro Hojas Rígidas Cosido", p: 200000, e: "Premium", d: "Libro premium 30x20cm encuadernado cosido, 20 páginas.", c: "Ideal como recuerdo para toda la vida." },
-      { n: "Fotolibro 20 páginas anillado", p: 200000, e: "Anillado", d: "Versión liviana con hojas rígidas y anillado.", c: "El anillado es más fácil de manejar." },
-      { n: "Álbum Grande 100 páginas", p: 200000, e: "Folios 30x20cm", d: "Álbum grande para combinar book, fiesta, cronológico.", c: "Perfecto para tener todo en un buen tamaño." }
+      { n: "Entrega fotos y videos en link (drive)", p: 0, e: "Incluido", d: "Alta calidad para descargar.", c: "Gratuito.", inc: true },
+      { n: "Material digital en Pendrive", p: 50000, e: "Físico", d: "Entrega física total.", c: "Respaldo duradero." },
+      { n: "Caja de Recuerdos con 100 fotos", p: 50000, e: "Impresas", d: "Caja decorativa con 100 fotos.", c: "Regalo hermoso." },
+      { n: "Álbum mediano 100 páginas", p: 100000, e: "Folios 21x15", d: "Álbum compacto.", c: "Elegí las mejores." },
+      { n: "Fotolibro Hojas Rígidas Cosido", p: 200000, e: "Premium", d: "30x20cm cosido.", c: "Recuerdo eterno." },
+      { n: "Fotolibro 20 páginas anillado", p: 200000, e: "Anillado", d: "Hojas rígidas.", c: "Fácil de manejar." },
+      { n: "Álbum Grande 100 páginas", p: 200000, e: "Folios 30x20cm", d: "Álbum gran tamaño.", c: "Combina book y fiesta." }
     ]
   };
 
-  // Videos oficiales (6 videos restaurados)
-  const videoList = [
-    { id: "uCXVYASqSgg", titulo: "Pre Fiesta" },
-    { id: "r0iwBxyq0dU", titulo: "Resumen Fiesta" },
-    { id: "ETyfXMMabk8", titulo: "Resumen Fotos" },
-    { id: "z9qDeUQr0MM", titulo: "Entrevistas" },
-    { id: "bNvJYLgidX8", titulo: "Back 15 años" },
-    { id: "IYY2vT4Tdaw", titulo: "Casamiento" }
+  // Definición de combos (sin aclaraciones de cámaras)
+  const combos = [
+    { nombre: "Combo Bronce", ahorro: 50000, total: 250000, servicios: ["100 Fotos Profesionales + 1 Video Resumen de 5 minutos"] },
+    { nombre: "Combo Plata", ahorro: 100000, total: 900000, servicios: ["Fotos Ilimitadas en la fiesta", "Video de la Fiesta + Resumen", "Fotos en el salón antes de la llegada de invitados", "Fotos instantáneas para invitados (100u)", "Video de Cierre", "Álbum mediano 100 páginas"] },
+    { nombre: "Combo Oro", ahorro: 200000, total: 1550000, servicios: ["Fotos Ilimitadas en la fiesta", "Video de la Fiesta + Resumen", "Video Entrevista divertida a invitados", "Fotos en el salón antes de la llegada de invitados", "Video de Cierre", "Fotos instantáneas para invitados (100u)", "Book Backstage Pre 15", "Banner 90x190cm", "Foto Gigante + Trípticos", "Libro de firmas calidad imprenta", "Invitación Interactiva", "Material digital en Pendrive", "Álbum Grande 100 páginas"] }
   ];
 
-  // ---------- RENDER SERVICIOS CON IMAGEN SECUENCIAL (menu/m1.jpg .. mN.jpg) ----------
+  // Servicios especiales para combos (no se muestran individualmente)
+  const comboServicios = [
+    { n: "100 Fotos Profesionales + 1 Video Resumen de 5 minutos", p: 250000, e: "Pack básico", d: "100 fotos editadas + video resumen de 5 minutos.", c: "Ideal para presupuestos ajustados.", comboOnly: true }
+  ];
+  serviciosData.durante.push(...comboServicios);
+
+  // ======================== RENDER SERVICIOS ========================
   let imgCounter = 1;
   function renderServicios() {
-    const renderGrupo = (grupo, containerId) => {
-      const container = document.getElementById(containerId);
+    const renderGrupo = (grupo, contId) => {
+      const container = document.getElementById(contId);
       serviciosData[grupo].forEach(serv => {
+        if (serv.comboOnly) return;
         const card = document.createElement('div');
         card.className = 'service-card';
         const imgPath = `menu/m${imgCounter}.jpg`;
         const checkedAttr = serv.inc ? 'checked disabled' : '';
-        const disabledStyle = serv.inc ? 'opacity-80' : '';
         card.innerHTML = `
           <img src="${imgPath}" class="menu-thumb" alt="${serv.n}" onerror="this.src='https://placehold.co/100x100?text=Cristal'">
           <div class="flex-1">
-            <h4 class="font-extrabold text-pink-900 text-sm leading-tight">${serv.n}</h4>
+            <h4 class="font-extrabold text-pink-900 text-sm">${serv.n}</h4>
             <p class="text-[0.65rem] text-gray-500">${serv.e}</p>
-            ${serv.link ? `<a href="${serv.link}" target="_blank" class="text-[0.6rem] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full inline-block mt-1 font-bold">📱 Ver Ejemplo</a>` : ''}
+            ${serv.link ? `<a href="${serv.link}" target="_blank" class="text-[0.6rem] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full inline-block mt-1">📱 Ver Ejemplo</a>` : ''}
           </div>
           <div class="flex flex-col items-end gap-1">
             <span class="price-badge">$${serv.p.toLocaleString()}</span>
-            <input type="checkbox" class="service-checkbox ${disabledStyle}" data-name="${serv.n}" data-price="${serv.p}" ${checkedAttr}>
+            <input type="checkbox" class="service-checkbox" data-name="${serv.n}" data-price="${serv.p}" ${checkedAttr}>
           </div>
         `;
-        // Evento click imagen para mostrar info + consejo
-        card.querySelector('.menu-thumb').addEventListener('click', (e) => {
-          e.stopPropagation();
-          showInfoModal(serv.n, serv.d, serv.c);
-        });
+        card.querySelector('.menu-thumb').onclick = () => showInfoModal(serv.n, serv.d, serv.c);
         container.appendChild(card);
         imgCounter++;
       });
@@ -366,7 +336,6 @@
     renderGrupo('despues', 'grid-despues');
   }
 
-  // Modal de info
   function showInfoModal(nombre, desc, consejo) {
     const modal = document.createElement('div');
     modal.className = 'fixed inset-0 bg-black/60 backdrop-blur-md z-[3000] flex items-center justify-center p-5';
@@ -382,69 +351,102 @@
     document.body.appendChild(modal);
   }
 
-  // --- GALERÍA DE FOTOS MEJORADA: carga TODAS las imágenes sin límite fijo (hasta 3 fallos consecutivos) ---
-  async function cargarGaleriaFotos() {
+  // ======================== COMBOS (con botón verde que envía WhatsApp directo) ========================
+  function renderCombos() {
+    const container = document.getElementById('combos-container');
+    combos.forEach(combo => {
+      const div = document.createElement('div');
+      div.className = 'combo-card hover:shadow-2xl transition transform active:scale-95';
+      div.innerHTML = `
+        <h3 class="text-2xl font-black text-pink-700">${combo.nombre}</h3>
+        <p class="ahorro-text text-gray-700 mt-1">🎉 Ahorro: $${combo.ahorro.toLocaleString()}</p>
+        <p class="text-3xl font-bold text-pink-600 mt-2">$${combo.total.toLocaleString()}</p>
+        <ul class="text-xs text-gray-500 mt-3 space-y-1 list-disc list-inside">
+          ${combo.servicios.map(s => `<li>${s}</li>`).join('')}
+        </ul>
+        <button class="mt-4 w-full btn-whatsapp-combo text-white font-bold py-2 rounded-full flex items-center justify-center gap-2 shadow-md" data-combo='${JSON.stringify(combo)}'>
+          <i class="fab fa-whatsapp"></i> Seleccionar este combo y consultar por WhatsApp
+        </button>
+      `;
+      container.appendChild(div);
+    });
+    // Eventos para botones de combo (envío directo a WhatsApp)
+    document.querySelectorAll('.btn-whatsapp-combo').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const comboData = JSON.parse(btn.dataset.combo);
+        const serviciosLista = comboData.servicios.map(s => `• ${s}`).join('\n');
+        const mensaje = `Hola Carlos, me interesa contratar el *${comboData.nombre}* 🎉\n\nServicios incluidos:\n${serviciosLista}\n\n💰 Precio del combo: $${comboData.total.toLocaleString()}\n\n¿Podemos coordinar los detalles? ¡Gracias!`;
+        const url = `https://wa.me/5491167137742?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+      });
+    });
+  }
+
+  // ======================== GALERÍA CON MINIATURAS ========================
+  async function cargarGaleriaConMiniaturas() {
     const contenedor = document.getElementById('galeria-fotos');
     contenedor.innerHTML = '';
     let i = 1;
-    let fallosConsecutivos = 0;
+    let fallos = 0;
     let cargadas = 0;
-
-    while (fallosConsecutivos < 3) {
-      const src = `img/a${i}.jpg`;
+    while (fallos < 3 && i <= 500) {
+      const thumbSrc = `img/thumbs/a${i}.jpg`;
       const existe = await new Promise(resolve => {
-        const imgTest = new Image();
-        imgTest.onload = () => resolve(true);
-        imgTest.onerror = () => resolve(false);
-        imgTest.src = src;
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = thumbSrc;
       });
       if (existe) {
+        const originalSrc = `img/a${i}.jpg`;
         const div = document.createElement('div');
         div.className = 'gallery-thumb';
-        div.innerHTML = `<img src="${src}" loading="lazy" alt="evento">`;
+        div.innerHTML = `<img src="${thumbSrc}" loading="lazy" alt="evento">`;
         div.onclick = () => {
-          document.getElementById('lightbox-img').src = src;
+          document.getElementById('lightbox-img').src = originalSrc;
           document.getElementById('lightbox').style.display = 'flex';
         };
         contenedor.appendChild(div);
         cargadas++;
-        fallosConsecutivos = 0;
+        fallos = 0;
       } else {
-        fallosConsecutivos++;
+        fallos++;
       }
       i++;
-      // límite de seguridad: hasta 500 imágenes
-      if (i > 500) break;
     }
-    const contadorSpan = document.getElementById('galeria-count');
-    if (cargadas === 0) {
-      contadorSpan.innerText = "📸 Subí tus fotos a la carpeta /img (a1.jpg, a2.jpg...)";
-    } else {
-      contadorSpan.innerText = `✨ Mostrando ${cargadas} fotos de tus momentos especiales`;
-    }
+    document.getElementById('galeria-count').innerText = cargadas ? `✨ ${cargadas} fotos (tocá para ampliar)` : "📸 Subí miniaturas a /img/thumbs/ (mismo nombre que originales)";
   }
 
-  // VIDEOS (miniaturas + botón pequeño)
+  // ======================== VIDEOS ========================
+  const videoList = [
+    { id: "uCXVYASqSgg", titulo: "Pre Fiesta" },
+    { id: "r0iwBxyq0dU", titulo: "Resumen Fiesta" },
+    { id: "ETyfXMMabk8", titulo: "Resumen Fotos" },
+    { id: "z9qDeUQr0MM", titulo: "Entrevistas" },
+    { id: "bNvJYLgidX8", titulo: "Back 15 años" },
+    { id: "IYY2vT4Tdaw", titulo: "Casamiento" }
+  ];
   function cargarVideos() {
     const videosCont = document.getElementById('videos-list');
     videosCont.innerHTML = '';
     videoList.forEach(v => {
       const col = document.createElement('div');
-      col.className = 'video-mini bg-white rounded-xl overflow-hidden shadow-sm';
+      col.className = 'video-mini';
       col.innerHTML = `
         <div class="aspect-video bg-gray-200">
           <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" class="w-full h-full object-cover">
         </div>
         <div class="p-2 text-center">
           <p class="text-xs font-bold text-pink-800 truncate">${v.titulo}</p>
-          <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" class="inline-block mt-1 bg-pink-600 text-white text-[0.65rem] font-bold px-3 py-1 rounded-full shadow">Ver video</a>
+          <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" class="inline-block mt-1 bg-pink-600 text-white text-[0.65rem] font-bold px-3 py-1 rounded-full">Ver video</a>
         </div>
       `;
       videosCont.appendChild(col);
     });
   }
 
-  // --- LÓGICA DE SELECCIÓN Y TOTAL ---
+  // ======================== SELECCIÓN Y TOTAL ========================
   function actualizarResumen() {
     const checkboxes = document.querySelectorAll('.service-checkbox:checked');
     const listaDiv = document.getElementById('resumen-lista');
@@ -456,25 +458,21 @@
       total += precio;
       itemsHtml += `<div class="flex justify-between text-sm border-b border-pink-50 pb-2"><span class="font-medium">${ch.dataset.name}</span><span class="font-bold text-pink-700">$${precio.toLocaleString()}</span></div>`;
     });
-    if (checkboxes.length === 0) itemsHtml = '<p class="text-gray-400 italic text-center">Selecciona servicios en la pestaña “Servicios”</p>';
+    if (checkboxes.length === 0) itemsHtml = '<p class="text-gray-400 italic text-center">Selecciona servicios o combos</p>';
     else itemsHtml += '</div>';
     listaDiv.innerHTML = itemsHtml;
     totalSpan.innerText = `$${total.toLocaleString()}`;
-
     const whatsBtn = document.getElementById('whatsapp-btn');
-    if (total > 0) {
-      whatsBtn.onclick = () => {
-        let msg = "Hola Carlos, me interesa contratar:\n\n";
-        checkboxes.forEach(c => msg += `• ${c.dataset.name}\n`);
-        msg += `\n💰 Total: $${total.toLocaleString()}\n\n¿Podemos coordinar los detalles? ¡Gracias!`;
-        window.open(`https://wa.me/5491167137742?text=${encodeURIComponent(msg)}`, '_blank');
-      };
-    } else {
-      whatsBtn.onclick = () => alert("Primero selecciona al menos un servicio.");
-    }
+    whatsBtn.onclick = () => {
+      if (total === 0) { alert("Primero selecciona servicios."); return; }
+      let msg = "Hola Carlos, quiero contratar:\n\n";
+      checkboxes.forEach(c => msg += `• ${c.dataset.name}\n`);
+      msg += `\nTotal: $${total.toLocaleString()}\n¿Podemos coordinar?`;
+      window.open(`https://wa.me/5491167137742?text=${encodeURIComponent(msg)}`, '_blank');
+    };
   }
 
-  // Funciones tabs
+  // ======================== TABS ========================
   function setTab(active) {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.add('hidden'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('tab-active'));
@@ -484,117 +482,79 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // --- PARTÍCULAS INTERACTIVAS (HUYEN Y APARECEN AL TOCAR) ---
+  // ======================== PARTÍCULAS ========================
   const canvas = document.getElementById('particles-canvas');
   const ctx = canvas.getContext('2d');
-  let width = window.innerWidth, height = window.innerHeight;
-  let particlesArray = [];
-  let mouse = { x: null, y: null, radius: 70 };
-
+  let width, height, particles = [], mouse = { x: null, y: null, radius: 70 };
   function resizeCanvas() { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; }
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-
+  window.addEventListener('resize', resizeCanvas); resizeCanvas();
   class Particle {
-    constructor(x, y, isBurst = false) {
-      this.x = x; this.y = y;
-      this.size = Math.random() * 4 + 1.8;
-      this.baseX = x; this.baseY = y;
-      this.vx = (Math.random() - 0.5) * (isBurst ? 5 : 0.8);
-      this.vy = (Math.random() - 0.5) * (isBurst ? 5 : 0.8);
-      this.life = 1;
-      this.isBurst = isBurst;
+    constructor(x, y, burst = false) {
+      this.x = x; this.y = y; this.size = Math.random() * 4 + 1.8;
+      this.vx = (Math.random() - 0.5) * (burst ? 5 : 0.8);
+      this.vy = (Math.random() - 0.5) * (burst ? 5 : 0.8);
+      this.life = 1; this.burst = burst;
       this.color = `rgba(219, 39, 119, ${Math.random() * 0.5 + 0.3})`;
     }
     update() {
-      if (!this.isBurst && mouse.x) {
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
+      if (!this.burst && mouse.x) {
+        let dx = mouse.x - this.x, dy = mouse.y - this.y;
+        let dist = Math.hypot(dx, dy);
         if (dist < mouse.radius) {
           let angle = Math.atan2(dy, dx);
           let force = (mouse.radius - dist) / mouse.radius;
-          let moveX = Math.cos(angle) * force * 2.2;
-          let moveY = Math.sin(angle) * force * 2.2;
-          this.x -= moveX;
-          this.y -= moveY;
+          this.x -= Math.cos(angle) * force * 2.2;
+          this.y -= Math.sin(angle) * force * 2.2;
         }
       }
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.isBurst) this.life -= 0.02;
-      if (!this.isBurst && (this.x < -20 || this.x > width+20 || this.y < -20 || this.y > height+20)) {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
+      this.x += this.vx; this.y += this.vy;
+      if (this.burst) this.life -= 0.02;
+      if (!this.burst && (this.x < -20 || this.x > width+20 || this.y < -20 || this.y > height+20)) {
+        this.x = Math.random() * width; this.y = Math.random() * height;
       }
       return this.life > 0;
     }
-    draw() {
-      ctx.globalAlpha = this.life;
-      ctx.fillStyle = this.color;
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
-      ctx.fill();
-    }
+    draw() { ctx.globalAlpha = this.life; ctx.fillStyle = this.color; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2); ctx.fill(); }
   }
-
-  function initParticles(count = 80) {
-    for(let i=0; i<count; i++) {
-      particlesArray.push(new Particle(Math.random()*width, Math.random()*height, false));
-    }
-  }
+  function initParticles(c=80) { for(let i=0;i<c;i++) particles.push(new Particle(Math.random()*width, Math.random()*height)); }
   function addBurst(e) {
-    let x = e.clientX ?? (e.touches ? e.touches[0].clientX : width/2);
-    let y = e.clientY ?? (e.touches ? e.touches[0].clientY : height/2);
-    for(let i=0; i<12; i++) particlesArray.push(new Particle(x, y, true));
+    let x = e.clientX ?? (e.touches?.[0]?.clientX ?? width/2);
+    let y = e.clientY ?? (e.touches?.[0]?.clientY ?? height/2);
+    for(let i=0;i<12;i++) particles.push(new Particle(x, y, true));
   }
-
   function animateParticles() {
     ctx.clearRect(0,0,width,height);
-    particlesArray = particlesArray.filter(p => p.update());
-    particlesArray.forEach(p => p.draw());
-    if (particlesArray.length < 60) particlesArray.push(new Particle(Math.random()*width, Math.random()*height, false));
+    particles = particles.filter(p => p.update());
+    particles.forEach(p => p.draw());
+    if (particles.length < 60) particles.push(new Particle(Math.random()*width, Math.random()*height));
     requestAnimationFrame(animateParticles);
   }
-
   window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
-  window.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+  window.addEventListener('mouseleave', () => { mouse.x = null; });
   canvas.addEventListener('touchmove', (e) => { if(e.touches[0]) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; } });
   canvas.addEventListener('touchstart', addBurst);
   canvas.addEventListener('mousedown', addBurst);
+  initParticles(); animateParticles();
 
-  initParticles(85);
-  animateParticles();
-
-  // EVENTOS UI
+  // ======================== EVENTOS GLOBALES ========================
   document.getElementById('tab-serv').onclick = () => setTab('serv');
   document.getElementById('tab-gal').onclick = () => setTab('gal');
   document.getElementById('tab-res').onclick = () => setTab('res');
   document.getElementById('calcular-total-btn').onclick = () => setTab('res');
-
-  document.body.addEventListener('change', (e) => {
-    if (e.target.classList && e.target.classList.contains('service-checkbox')) {
-      if (e.target.hasAttribute('disabled')) return;
-      actualizarResumen();
-    }
-  });
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  function checkReveal() {
-    reveals.forEach(r => {
-      const top = r.getBoundingClientRect().top;
-      if (top < window.innerHeight - 80) r.classList.add('active');
-    });
-  }
-  window.addEventListener('scroll', checkReveal);
-  checkReveal();
+  document.body.addEventListener('change', (e) => { if(e.target.classList?.contains('service-checkbox')) actualizarResumen(); });
 
   // Inicialización
   renderServicios();
+  renderCombos();
   cargarVideos();
-  cargarGaleriaFotos();  // ahora carga todas las imágenes existentes
+  cargarGaleriaConMiniaturas();
   actualizarResumen();
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  function checkReveal() { reveals.forEach(r => { if(r.getBoundingClientRect().top < window.innerHeight-80) r.classList.add('active'); }); }
+  window.addEventListener('scroll', checkReveal);
+  checkReveal();
 </script>
 </body>
 </html>
